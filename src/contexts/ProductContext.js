@@ -8,11 +8,11 @@ const ProductProvider = ({ children }) => {
     const fetchProduct = async ()=>{
       const res = await fetch("https://fakestoreapi.com/products")
       const data = await res.json()
-      console.log(data);
+      setProducts(data)
     }
     fetchProduct()
   },[])
-  return <ProductContext.Provider>{children}</ProductContext.Provider>;
+  return <ProductContext.Provider value={{products}}>{children}</ProductContext.Provider>;
 };
 
 export default ProductProvider;
