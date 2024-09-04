@@ -2,13 +2,16 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
-import  ProductProvider  from "./contexts/ProductContext";
+import ProductProvider from "./contexts/ProductContext";
+import { SidebarContext } from "./contexts/SidebarContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <ProductProvider>
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  </ProductProvider>
+  <SidebarContext>
+    <ProductProvider>
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    </ProductProvider>
+  </SidebarContext>
 );
