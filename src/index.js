@@ -3,15 +3,15 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import ProductProvider from "./contexts/ProductContext";
-import { SidebarContext } from "./contexts/SidebarContext";
+import SidebarProvider  from "./contexts/SidebarContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <SidebarContext>
+  <SidebarProvider>
     <ProductProvider>
       <React.StrictMode>
         <App />
       </React.StrictMode>
     </ProductProvider>
-  </SidebarContext>
+  </SidebarProvider>
 );
