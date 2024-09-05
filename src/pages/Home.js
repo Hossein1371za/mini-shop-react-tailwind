@@ -23,7 +23,6 @@ const Home = () => {
             ))}
           </div>
         </div>
-        <Sidebar />
       </section>
     </div>
   );
