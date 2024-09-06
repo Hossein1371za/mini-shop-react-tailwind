@@ -22,7 +22,8 @@ const CartProvider = ({ children }) => {
       setCart([...cart,newItem])
     }
   };
-  // secound 
+
+  // secound
   // const addToCart = (id, product) => {
   //   setCart((prevCart) => {
   //     const cartItem = prevCart.find((item) => item.id === id);
@@ -37,7 +38,7 @@ const CartProvider = ({ children }) => {
   // };
 
   return (
-    <CartContext.Provider value={{ addToCart }}>
+    <CartContext.Provider value={{cart, addToCart }}>
       {children}
     </CartContext.Provider>
   );

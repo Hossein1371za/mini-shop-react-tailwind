@@ -8,7 +8,7 @@ import { CartContext } from "../contexts/CartContext";
 
 const Sidebar = () => {
   const { isOpen, handleClose } = useContext(SidebarContext);
-  const {} = useContext(CartContext)
+  const {cart} = useContext(CartContext)
 
   return (
     <div
@@ -23,6 +23,13 @@ const Sidebar = () => {
         <div onClick={handleClose} className="cursor-pointer w-8 h-8 flex items-center justify-center">
           <IoMdArrowForward className="text-2xl" />
         </div>
+      </div>
+      <div>
+        {cart.map((item)=>{
+          return (
+            <CartItem key={item.id} item={item}/>
+          )
+        })}
       </div>
     </div>
   );
