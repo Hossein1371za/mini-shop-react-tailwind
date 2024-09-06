@@ -18,7 +18,7 @@ const Sidebar = () => {
     >
       <div className="flex items-center justify-between py-6 border-b">
         <div className="uppercase font-semibold text-sm">
-          Shopping Bag (0)
+          Shopping Bag ({`${cart.length}`})
           </div>
         <div onClick={handleClose} className="cursor-pointer w-8 h-8 flex items-center justify-center">
           <IoMdArrowForward className="text-2xl" />
