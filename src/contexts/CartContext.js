@@ -22,14 +22,6 @@ const CartProvider = ({ children }) => {
       setCart([...cart,newItem])
     }
   };
-
-  const removeItemCart=(id)=>{
-    const newCart = cart.filter((item)=>(
-      item.id !== id
-    ))
-    setCart(newCart)
-  }
-
   // secound
   // const addToCart = (id, product) => {
   //   setCart((prevCart) => {
@@ -44,8 +36,20 @@ const CartProvider = ({ children }) => {
   //   });
   // };
 
+  const removeItemCart=(id)=>{
+    const newCart = cart.filter((item)=>(
+      item.id !== id
+    ))
+    setCart(newCart)
+  }
+
+  const clearCart =()=>{
+    setCart([])
+  }
+  
+
   return (
-    <CartContext.Provider value={{cart, addToCart,removeItemCart }}>
+    <CartContext.Provider value={{cart, addToCart,removeItemCart,clearCart }}>
       {children}
     </CartContext.Provider>
   );
