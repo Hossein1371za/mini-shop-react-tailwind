@@ -35,8 +35,8 @@ const Sidebar = () => {
       {cart.length ? (
         <div className="m-4">
           <div className="flex justify-between items-center w-fll">
-            <div>
-              <span>total : </span>1000
+            <div className="uppercase font-semibold">
+              <span className="mr-2">total : </span>1000
             </div>
             <div
               onClick={clearCart}
