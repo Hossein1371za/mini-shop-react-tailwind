@@ -14,7 +14,7 @@ const Sidebar = () => {
     <div
       className={`${
         isOpen ? "right-0" : "-right-full"
-      } w-full bg-white fixed h-full top-0 overflow-y-scroll shadow-2xl md:w-[35vw] lg:w-[30vw] transition-all duration-300 z-20 px-4 lg:px-[35px]`}
+      } w-full bg-white fixed h-full top-0 shadow-2xl md:w-[35vw] lg:w-[30vw] transition-all duration-300 z-20 px-4 lg:px-[35px]`}
     >
       <div className="flex items-center justify-between py-6 border-b">
         <div className="uppercase font-semibold text-sm">
@@ -27,7 +27,7 @@ const Sidebar = () => {
           <IoMdArrowForward className="text-2xl" />
         </div>
       </div>
-      <div>
+      <div className="flex flex-col h-[540px] lg:h-[640px] gap-y-2 overflow-y-auto overflow-x-hidden border-b">
         {cart.map((item) => {
           return <CartItem key={item.id} item={item} />;
         })}

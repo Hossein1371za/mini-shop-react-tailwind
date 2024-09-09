@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 const Header = () => {
   const [isActive,setIsActive] = useState(false)
   const { isOpen, setIsOpen } = useContext(SidebarContext);
-  const { cart } = useContext(CartContext);
+  const { itemAmount } = useContext(CartContext);
   useEffect(()=>{
     window.addEventListener("scroll",()=>{
       window.scrollY > 60 ? setIsActive(true) : setIsActive(false)
@@ -27,7 +27,7 @@ const Header = () => {
           >
             <BsBag className="text-2xl" />
             <div className="bg-red-500 text-white rounded-full absolute -right-2 -bottom-2 w-[18px] h-[18px] text-[12px] flex justify-center items-center">
-              {`${cart.length}`}
+              {itemAmount}
             </div>
           </div>
         </div>
