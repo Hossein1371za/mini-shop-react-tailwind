@@ -46,10 +46,9 @@ const CartProvider = ({ children }) => {
   };
 
   const incItem = (id) => {
-    const itemPlus = cart.find((item) => item.id === id);
-    addToCart(itemPlus, id);
+    const cartItem = cart.find((item) => item.id === id);
+    addToCart(cartItem, id);
   };
-  
 
   const decItem = (id) => {
     const CartItem = cart.find((item) => item.id === id);
@@ -68,10 +67,17 @@ const CartProvider = ({ children }) => {
       }
     }
   };
-  
+
   return (
     <CartContext.Provider
-      value={{ cart, addToCart, removeItemCart, clearCart, incItem,decItem }}
+      value={{
+        cart,
+        addToCart,
+        removeItemCart,
+        clearCart,
+        incItem,
+        decItem,
+      }}
     >
       {children}
     </CartContext.Provider>
