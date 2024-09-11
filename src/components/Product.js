@@ -25,7 +25,7 @@ const {addToCart} = useContext(CartContext)
             </div>
           </button>
           <Link
-            to="/product/${id}"
+            to={`/product/${id}`}
             className="bg-white w-12 h-12 flex items-center justify-center drop-shadow-xl text-primary"
           >
             <BsEyeFill />
@@ -35,7 +35,7 @@ const {addToCart} = useContext(CartContext)
       <div>
         
         <div className="text-sm capitalize text-gray-500">{category}</div>
-        <Link to="/product/${id}">
+        <Link to={`/product/${id}`}>
           <h2 className="font-semibold mb-1">{title}</h2>
         </Link>
         <div className="font-semibold">$ {price}</div>
