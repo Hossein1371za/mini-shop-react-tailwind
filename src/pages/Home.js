@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { ProductContext } from "../contexts/ProductContext";
 import Product from "../components/Product"
-import Sidebar from "../components/Sidebar";
 import Hero from "../components/Hero";
 
 const Home = () => {
